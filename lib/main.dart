@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_infinite_list/bloc/bloc/delegate.dart';
 import 'package:flutter_bloc_infinite_list/pages/home_page.dart';
 import 'package:http/http.dart' as http;
 
 import 'bloc/bloc/post_bloc.dart';
 
 void main() {
+  BlocSupervisor.delegate = SimpleBlocDelegate();
   runApp(MyApp());
 }
 
